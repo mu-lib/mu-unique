@@ -1,0 +1,28 @@
+{
+  "name": "mu-unique",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mu-lib/mu-unique",
+  "authors": [
+    "µLib Team (https://github.com/mu-lib)"
+  ],
+  "description": "Uniqueify an array",
+  "main": "./unique.js",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "keywords": [
+    "unique",
+    "array",
+    "in-place",
+    "comparator"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
