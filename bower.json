@@ -1,0 +1,23 @@
+{
+  "name": "mu-unique",
+  "homepage": "https://github.com/mu-lib/mu-unique",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mu-lib/mu-unique.git"
+  },
+  "description": "Micro Unique",
+  "main": "main.js",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "devDependencies": {
+    "requirejs": "~2"
+  }
+}
