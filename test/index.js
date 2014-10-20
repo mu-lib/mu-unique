@@ -65,7 +65,7 @@ describe("without setting 'this'", function () {
 
             it('should uniqueify the array', function () {
 
-                uniqueify(arr);
+                should.equal(unique.length, uniqueify(arr));
                 should.deepEqual(arr, unique);
 
             });
@@ -79,7 +79,7 @@ describe("without setting 'this'", function () {
 
             it('should uniqueify the array', function () {
 
-                uniqueify(arr);
+                should.equal(unique.length, uniqueify(arr));
                 should.deepEqual(arr, unique);
 
             });
@@ -97,9 +97,9 @@ describe("without setting 'this'", function () {
 
             it('should uniqueify the array', function () {
 
-                uniqueify(arr, function (a, b) {
+                should.equal(unique.length, uniqueify(arr, function (a, b) {
                     return a[0] > b[0] ? 1 : a[0] < b[0] ? -1 : 0;
-                });
+                }));
                 should.deepEqual(arr, unique);
 
             });
@@ -123,9 +123,9 @@ describe("without setting 'this'", function () {
 
             it('should uniqueify the array', function () {
 
-                uniqueify(arr, function (a, b) {
+                should.equal(unique.length, uniqueify(arr, function (a, b) {
                     return a.id - b.id;
-                });
+                }));
                 should.deepEqual(arr, unique);
 
             });
@@ -147,7 +147,7 @@ describe("with setting 'this'", function () {
 
             it('should uniqueify the array', function () {
 
-                uniqueify.call(arr);
+                should.equal(unique.length, uniqueify.call(arr));
                 should.deepEqual(arr, unique);
 
             });
@@ -161,7 +161,7 @@ describe("with setting 'this'", function () {
 
             it('should uniqueify the array', function () {
 
-                uniqueify.call(arr);
+                should.equal(unique.length, uniqueify.call(arr));
                 should.deepEqual(arr, unique);
 
             });
@@ -179,9 +179,9 @@ describe("with setting 'this'", function () {
 
             it('should uniqueify the array', function () {
 
-                uniqueify.call(arr, function (a, b) {
+                should.equal(unique.length, uniqueify.call(arr, function (a, b) {
                     return a[0] > b[0] ? 1 : a[0] < b[0] ? -1 : 0;
-                });
+                }));
                 should.deepEqual(arr, unique);
 
             });
@@ -205,9 +205,9 @@ describe("with setting 'this'", function () {
 
             it('should uniqueify the array', function () {
 
-                uniqueify.call(arr, function (a, b) {
+                should.equal(unique.length, uniqueify.call(arr, function (a, b) {
                     return a.id - b.id;
-                });
+                }));
                 should.deepEqual(arr, unique);
 
             });
