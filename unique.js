@@ -4,8 +4,8 @@
 
 if (typeof define === 'function' && define.amd) {
 
-    define(['./dist/amd/unique'], function(decree) {
-        return decree;
+    define(['./dist/amd/unique'], function(unique) {
+        return unique;
     });
 
 } else if (typeof exports === 'object') {
