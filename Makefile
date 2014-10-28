@@ -17,16 +17,19 @@ dist_cjs:
 dist_amd:
 	cd src && $(FUME) $(SRC_FILES) -amdify -o ../$(DIST_DIR)/amd && cd ..
 
+dist_umd:
+	cd src && $(FUME) $(SRC_FILES) -umdify -o ../$(DIST_DIR) && cd ..
+
 rm_dist:
 	rm -rf $(DIST_DIR)
 
-build: rm_dist dist_amd dist_cjs
+build: rm_dist dist_umd
 
 test: build
-	$(MOCHA) --recursive --reporter spec $(TESTS_DIR)
+	$(MOCHA) --recursive --reporter spec $(TEST_DIR)
 
 coverage: build
-	$(ISTANBUL) cover $(_MOCHA) -- --recursive --reporter spec $(TESTS_DIR)
+	$(ISTANBUL) cover $(_MOCHA) -- --recursive --reporter spec $(TEST_DIR)
 
 travis: install build
-	$(ISTANBUL) cover --report lcovonly $(_MOCHA) -- --recursive --reporter spec --bail $(TESTS_DIR) && cat ./coverage/lcov.info | $(COVERALLS)
+	$(ISTANBUL) cover --report lcovonly $(_MOCHA) -- --recursive --reporter spec --bail $(TEST_DIR) && cat ./coverage/lcov.info | $(COVERALLS)
