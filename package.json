@@ -1,6 +1,6 @@
 {
   "name": "mu-unique",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Uniqueify an array",
   "main": "dist/unique.js",
   "scripts": {
