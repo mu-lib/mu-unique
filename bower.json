@@ -2,11 +2,15 @@
   "name": "mu-unique",
   "version": "0.0.3",
   "homepage": "https://github.com/mu-lib/mu-unique",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mu-lib/mu-unique.git"
+  },
   "authors": [
     "µLib Team (https://github.com/mu-lib)"
   ],
   "description": "Uniqueify an array",
-  "main": "./dist/unique.js",
+  "main": "main.js",
   "moduleType": [
     "amd",
     "node"
@@ -20,11 +24,8 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
-    "makefile",
-    "src",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "test"
   ]
 }
